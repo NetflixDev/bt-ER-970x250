@@ -4,19 +4,19 @@ if (typeof module === 'undefined') {
 }
 // prettier-ignore
 module.exports = {
-  "id": "8c417243-849b-4868-8eb9-91063e2f3d80",
-  "name": "bt-ER-300x250",
+  "id": "0367c5ab-f303-4457-9646-6eff86644817",
+  "name": "bt-ER-970x250-right-corner",
   "description": "C20/Monet-compatible templates that use  https://github.com/ff0000-ad-tech/ad-docs/blob/master/README.md",
   "type": "build_templates",
   "tier": "endframe-resolve",
-  "width": "300",
+  "width": "970",
   "height": "250",
-  "creative": "./3-traffic/default/300x250",
+  "creative": "./3-traffic/default/970x250-right-corner",
   "context": "RED Interactive",
   "state": "published",
-  "updated": 1554165084427,
+  "updated": 1554852456233,
   "username": "GitHub",
-  "full_name": "NetflixDev/bt-ER-300x250",
-  "html_url": "https://github.com/NetflixDev/bt-ER-300x250",
+  "full_name": "NetflixDev/bt-ER-970x250-right-corner",
+  "html_url": "https://github.com/NetflixDev/bt-ER-970x250-right-corner",
   "version": "2.2.1"
-};
+}

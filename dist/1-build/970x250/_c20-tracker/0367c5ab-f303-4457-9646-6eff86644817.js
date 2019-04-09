@@ -1,22 +1,22 @@
-// GENERIC SOURCE TRACKER: bt-ES6-Webpack-Intro-Endframe-Branded
+// GENERIC SOURCE TRACKER: bt-Endframe-Resolve
 if (typeof module === 'undefined') {
 	module = {}
 }
 // prettier-ignore
 module.exports = {
-  "id": "a25e89ce-1551-4ad1-99b3-2e7d45a7560d",
-  "name": "bt-Endframe-Resolve",
+  "id": "0367c5ab-f303-4457-9646-6eff86644817",
+  "name": "bt-ER-970x250-right-corner",
   "description": "C20/Monet-compatible templates that use  https://github.com/ff0000-ad-tech/ad-docs/blob/master/README.md",
   "type": "build_templates",
   "tier": "endframe-resolve",
-  "width": "300",
+  "width": "970",
   "height": "250",
-  "creative": "./3-traffic/default/300x250/creative.js",
+  "creative": "./3-traffic/default/970x250-right-corner",
   "context": "RED Interactive",
   "state": "published",
-  "updated": 1550171274024,
+  "updated": 1554852456233,
   "username": "GitHub",
-  "full_name": "NetflixDev/bt-Endframe-Resolve",
-  "html_url": "https://github.com/NetflixDev/bt-Endframe-Resolve",
+  "full_name": "NetflixDev/bt-ER-970x250-right-corner",
+  "html_url": "https://github.com/NetflixDev/bt-ER-970x250-right-corner",
   "version": "2.2.1"
-};
+}

@@ -22,6 +22,11 @@
         "size": "300x600",
         "index": "index.html",
         "deployAt": 1554834587278
+      },
+      {
+        "size": "970x250",
+        "index": "index.html",
+        "deployAt": 1554852193797
       }
     ],
     "updateAt": 1546631498784

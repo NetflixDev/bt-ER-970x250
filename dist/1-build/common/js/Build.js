@@ -10,7 +10,8 @@ import '@netflixadseng/wc-netflix-flushed-ribbon'
 import '@netflixadseng/wc-netflix-video'
 import { UIComponent, UIBorder, UIButton, UIImage, TextFormat, UITextField, UISvg } from 'ad-ui'
 import { ObjectUtils } from 'ad-utils'
-import CanvasIris from '@common/js/CanvasIris'
+import CanvasIris from '@common/js/CanvasIris.js'
+import postMarkup from '@common/js/postMarkup.js'
 
 export function Main() {
 	var T = Markup.get('main')
@@ -63,7 +64,7 @@ export function EndFrame(arg) {
 	// title treatment
 	T.tt = document.createElement('netflix-img')
 	T.tt.setAttribute('data-dynamic-key', 'Title_Treatment')
-	T.tt.setAttribute('width', 300)
+	T.tt.setAttribute('height', adParams.adHeight)
 	T.appendChild(T.tt)
 
 	// free trial messaging
@@ -86,9 +87,9 @@ export function EndFrame(arg) {
 	T.cta.setAttribute('data-dynamic-key', 'CTA')
 	T.cta.setAttribute('arrow', '')
 	T.cta.setAttribute('border', '')
-	T.cta.setAttribute('width', 107)
-	T.cta.setAttribute('max-width', 117)
-	T.cta.setAttribute('height', 28)
+	T.cta.setAttribute('width', 116)
+	T.cta.setAttribute('max-width', 130)
+	T.cta.setAttribute('height', 30)
 	T.appendChild(T.cta)
 
 	// ratings bug
@@ -106,101 +107,7 @@ export function EndFrame(arg) {
 			irisColor: Creative.irisColor
 		})
 
-	T.postMarkupStyling = function() {
-		let T = View.endFrame
-
-		// title treatment
-		Align.set(T.tt, {
-			x: Align.CENTER,
-			y: Align.CENTER
-		})
-
-		Align.set(T.pedigree, {
-			x: {
-				type: Align.CENTER,
-				against: T.tt
-			},
-			y: {
-				type: Align.CENTER,
-				against: 55
-			}
-		})
-
-		if (adData.hasFTM) {
-			// free trial messaging
-			Styles.setCss(T.ftm, {
-				color: '#fff',
-				fontSize: 14,
-				letterSpacing: 1,
-				textAlign: 'center'
-			})
-			Align.set(T.ftm, {
-				x: Align.CENTER,
-				y: {
-					type: Align.BOTTOM,
-					offset: -65
-				}
-			})
-			T.removeChild(T.tuneIn)
-		} else {
-			// tune-in
-			Styles.setCss(T.tuneIn, {
-				color: '#fff',
-				fontSize: 16,
-				letterSpacing: 1,
-				textAlign: 'center'
-			})
-			Align.set(T.tuneIn, {
-				x: Align.CENTER,
-				y: {
-					type: Align.BOTTOM,
-					offset: -65
-				}
-			})
-			T.removeChild(T.ftm)
-		}
-
-		// logo
-		Align.set(T.netflixLogo, {
-			x: {
-				type: Align.LEFT,
-				offset: 28
-			},
-			y: {
-				type: Align.TOP,
-				offset: 551
-			}
-		})
-
-		// cta
-		T.cta.resize()
-		Align.set(T.cta, {
-			x: {
-				type: Align.LEFT,
-				offset: 155
-			},
-			y: {
-				type: Align.TOP,
-				offset: 551
-			}
-		})
-
-		// ratings bug
-		if (adData.hasRatings) {
-			Align.set(T.ratingsBug, {
-				x: {
-					type: Align.RIGHT,
-					offset: -5
-				},
-				y: {
-					type: Align.BOTTOM,
-					offset: -5
-				}
-			})
-		} else {
-			T.removeChild(T.ratingsBug)
-		}
-	}
+	T.postMarkupStyling = postMarkup
 
 	return T
 }
