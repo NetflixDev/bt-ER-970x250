@@ -53,10 +53,30 @@ export default function() {
 		}
 	})
 
-	const ctaLogoLockup = new UIGroup({
-		target: T,
-		children: [T.cta, T.netflixLogo]
-	})
+	function getRectAroundElems(elems) {
+		const rects = elems
+			.map(el => el.getBoundingClientRect())
+			// filter out any non-rendered elems
+			// (determined as elem w/o width and height)
+			.filter(rect => rect.width || rect.height)
+		const left = rects.map(rect => rect.left).reduce((mostLeft, val) => Math.min(mostLeft, val))
+		const top = rects.map(rect => rect.top).reduce((mostTop, val) => Math.min(mostTop, val))
+		const right = rects.map(rect => rect.right).reduce((mostRight, val) => Math.max(mostRight, val))
+		const bottom = rects.map(rect => rect.bottom).reduce((mostBottom, val) => Math.max(mostBottom, val))
+		const center = (left + right) / 2
+		return {
+			x: left,
+			y: top,
+			top,
+			left,
+			bottom,
+			right,
+			width: right - left,
+			height: bottom - top,
+			center
+		}
+	}
+	const ctaLogoRect = getRectAroundElems([T.cta, T.netflixLogo])
 
 	if (adData.hasFTM) {
 		// free trial messaging
@@ -67,11 +87,10 @@ export default function() {
 			textAlign: 'center'
 		})
 		Align.set(T.ftm, {
-			x: { type: Align.CENTER, against: ctaLogoLockup },
+			x: { type: Align.CENTER, against: ctaLogoRect.center },
 			y: {
-				type: Align.TOP,
-				against: ctaLogoLockup,
-				outer: true,
+				type: Align.BOTTOM,
+				against: ctaLogoRect.top,
 				offset: -18
 			}
 		})
@@ -85,11 +104,10 @@ export default function() {
 			textAlign: 'center'
 		})
 		Align.set(T.tuneIn, {
-			x: { type: Align.CENTER, against: ctaLogoLockup },
+			x: { type: Align.CENTER, against: ctaLogoRect.center },
 			y: {
-				type: Align.TOP,
-				against: ctaLogoLockup,
-				outer: true,
+				type: Align.BOTTOM,
+				against: ctaLogoRect.top,
 				offset: -18
 			}
 		})
