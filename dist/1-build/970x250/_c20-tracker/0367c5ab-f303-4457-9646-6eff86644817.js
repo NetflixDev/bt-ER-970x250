@@ -9,13 +9,19 @@ module.exports = {
   "label": "Right Corner",
   "description": "C20/Monet-compatible templates that use  https://github.com/ff0000-ad-tech/ad-docs/blob/master/README.md",
   "type": "build_templates",
-  "tier": "endframe-resolve",
-  "width": "970",
-  "height": "250",
-  "creative": "./3-traffic/default/970x250",
+  "builder": {
+    "label": "Right Corner",
+    "tier": "endframe-resolve",
+    "size": "970x250",
+    "creative": "./3-traffic/default/970x250"
+  },
   "context": "RED Interactive",
   "state": "published",
+<<<<<<< HEAD
   "updated": 1556559544538,
+=======
+  "updated": 1556143372473,
+>>>>>>> 7fccd4e86809a36ae53d471286035ca51f6f7b08
   "username": "GitHub",
   "full_name": "NetflixDev/bt-ER-970x250",
   "html_url": "https://github.com/NetflixDev/bt-ER-970x250",
