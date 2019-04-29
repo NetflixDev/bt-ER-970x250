@@ -13,11 +13,20 @@ module.exports = {
     "label": "Right Corner",
     "tier": "endframe-resolve",
     "size": "970x250",
-    "creative": "./3-traffic/default/970x250"
+    "creative": "./3-traffic/default/970x250",
+    "layouts": {
+      "SIDE_BY_SIDE_LEFT": "Side-By-Side Left",
+      "SIDE_BY_SIDE_OFF_CENTER_LEFT": "Side-By-Side Off-Center Left",
+      "SIDE_BY_SIDE_CENTER": "Side-By-Side Center",
+      "SIDE_BY_SIDE_OFF_CENTER_RIGHT": "Side-By-Side Off-Center Right",
+      "SIDE_BY_SIDE_RIGHT": "Side-By-Side Right",
+      "STACKED_LEFT": "Stacked Left",
+      "STACKED_CENTER": "Stacked Center"
+    }
   },
   "context": "RED Interactive",
   "state": "published",
-  "updated": 1556559544538,
+  "updated": 1556579312955,
   "username": "GitHub",
   "full_name": "NetflixDev/bt-ER-970x250",
   "html_url": "https://github.com/NetflixDev/bt-ER-970x250",

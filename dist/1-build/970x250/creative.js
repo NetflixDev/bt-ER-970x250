@@ -13,3 +13,5 @@ var Creative = function() {
 		})
 	}
 }
+
+Creative.layout = 'SIDE_BY_SIDE_RIGHT'
