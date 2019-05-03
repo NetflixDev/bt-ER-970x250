@@ -6,14 +6,14 @@ if (typeof module === 'undefined') {
 module.exports = {
   "id": "0367c5ab-f303-4457-9646-6eff86644817",
   "name": "bt-ER-970x250",
-  "label": "Right Corner",
   "description": "C20/Monet-compatible templates that use  https://github.com/ff0000-ad-tech/ad-docs/blob/master/README.md",
   "type": "build_templates",
   "builder": {
-    "label": "Right Corner",
+    "label": "970x250 NF Global Template",
     "tier": "endframe-resolve",
     "size": "970x250",
-    "creative": "./3-traffic/default/970x250",
+    "creative": "./dist/3-traffic/default/970x250",
+    "toolkit": "./toolkit/970x250_NF_Global_Template_ContainerRecycle_Layered.psd",
     "layouts": {
       "SIDE_BY_SIDE_LEFT": "Side-By-Side Left",
       "SIDE_BY_SIDE_OFF_CENTER_LEFT": "Side-By-Side Off-Center Left",
