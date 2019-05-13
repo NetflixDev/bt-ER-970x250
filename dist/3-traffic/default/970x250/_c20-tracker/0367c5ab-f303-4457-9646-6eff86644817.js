@@ -20,13 +20,12 @@ module.exports = {
       "SIDE_BY_SIDE_CENTER": "Side-By-Side Center",
       "SIDE_BY_SIDE_OFF_CENTER_RIGHT": "Side-By-Side Off-Center Right",
       "SIDE_BY_SIDE_RIGHT": "Side-By-Side Right",
-      "STACKED_LEFT": "Stacked Left",
-      "STACKED_CENTER": "Stacked Center"
+      "STACKED": "Stacked"
     }
   },
   "context": "RED Interactive",
   "state": "published",
-  "updated": 1557536108072,
+  "updated": 1557791170892,
   "username": "GitHub",
   "full_name": "NetflixDev/bt-ER-970x250",
   "html_url": "https://github.com/NetflixDev/bt-ER-970x250",
