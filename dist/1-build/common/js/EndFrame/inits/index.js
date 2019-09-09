@@ -15,13 +15,22 @@ import {
 import { ObjectUtils } from "ad-utils";
 import baseInit from "./baseInit.js";
 
-export { mainInit };
+export { mainInit, stackedInit };
 
 function mainInit(T) {
   baseInit(T, {
-    logoWidth: 110,
-    ctaWidth: 107,
+    logoWidth: 111,
+    ctaWidth: 111,
     ctaMaxWidth: 130,
     ctaHeight: 28
+  });
+}
+
+function stackedInit(T) {
+  baseInit(T, {
+    logoWidth: 121,
+    ctaWidth: 121,
+    ctaMaxWidth: 121,
+    ctaHeight: 32
   });
 }
